@@ -10,12 +10,12 @@ pipeline {
         echo "Building release ${RELEASE} with log level ${LOG_LEVEL} ..."
       }
     }
-    stage('Test'){
+    stage('Test') {
       steps{
-        echo "Testing release ${RELEASE} but log level ${LOG_LEVEL} is not visible..."
+        echo "Testing release ${RELEASE} ."
       }
     }
-     stage('Deploy'){
+     stage('Deploy') {
        input {
          message 'Deploy'
          ok 'Do it!'
